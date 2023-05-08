@@ -69,12 +69,7 @@ export class AfterAuthHandlerService implements ShopifyAuthAfterHandler {
         rawResponse: fastifyEnabled ? res.raw : res,
       });
     } else {
-      let host: string;
-      if (fastifyEnabled) {
-        host = req.query['host'] || req.headers['Host'];
-      } else {
-        host = req.query['host'];
-      }
+      const host = req.query['host'];
       redirectUrl = `/?shop=${shop}&host=${encodeURIComponent(host)}`;
     }
 
