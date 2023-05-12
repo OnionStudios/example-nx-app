@@ -71,6 +71,7 @@
     "@nrwl/web": "15.9.2",
     "@nrwl/webpack": "15.9.2",
     "@nrwl/workspace": "15.9.2",
+    "@nx/nest": "^16.1.4",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
     "@shopify/app": "^3.45.4",
     "@shopify/cli": "^3.45.4",
