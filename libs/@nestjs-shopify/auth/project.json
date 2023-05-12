@@ -1,11 +1,11 @@
 {
-  "name": "@nestjs-shopify-auth",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/@nestjs-shopify/auth/src",
+  "name": "auth",
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/js:tsc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/@nestjs-shopify/auth",
@@ -15,29 +15,19 @@
         "assets": ["libs/@nestjs-shopify/auth/*.md"]
       }
     },
-    "publish": {
-      "command": "node tools/scripts/publish.mjs @nestjs-shopify-auth {args.ver} {args.tag}",
-      "dependsOn": ["build"]
-    },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/@nestjs-shopify/auth/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/packages/auth"],
       "options": {
         "jestConfig": "libs/@nestjs-shopify/auth/jest.config.ts",
         "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
       }
     }
   },

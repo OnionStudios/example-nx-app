@@ -1,1 +1,1 @@
-export * from './lib/@nestjs-shopify-graphql.module';
+export * from './graphql-proxy';

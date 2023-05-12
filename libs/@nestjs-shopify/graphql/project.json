@@ -1,11 +1,11 @@
 {
-  "name": "@nestjs-shopify-graphql",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/@nestjs-shopify/graphql/src",
+  "name": "graphql",
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/js:tsc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/@nestjs-shopify/graphql",
@@ -15,31 +15,22 @@
         "assets": ["libs/@nestjs-shopify/graphql/*.md"]
       }
     },
-    "publish": {
-      "command": "node tools/scripts/publish.mjs @nestjs-shopify-graphql {args.ver} {args.tag}",
-      "dependsOn": ["build"]
-    },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/@nestjs-shopify/graphql/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/packages/graphql"],
       "options": {
         "jestConfig": "libs/@nestjs-shopify/graphql/jest.config.ts",
         "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
       }
     }
   },
+  "implicitDependencies": ["auth", "core"],
   "tags": []
 }
