@@ -17,6 +17,7 @@
     "typeorm:show": "npm run typeorm -- --dataSource=./data-source.ts migration:show",
     "shopify": "shopify",
     "update-url": "node tools/cli/update.url.mjs",
+    "lint-staged": "lint-staged --relative --config .lintstagedrc.js",
     "prepare": "husky install"
   },
   "private": true,
@@ -103,6 +104,7 @@
     "jest": "29.5.0",
     "jest-environment-jsdom": "29.5.0",
     "jest-environment-node": "^29.4.1",
+    "lint-staged": "^13.2.2",
     "nx": "15.9.2",
     "prettier": "^2.8.7",
     "react-refresh": "^0.14.0",
