@@ -46,18 +46,18 @@ async function bootstrap() {
     );
   } else {
     const instance = fastify();
-    instance.addHook('onRequest', (request, reply, done) => {
-      reply['setHeader'] = function (key, value) {
-        return this.raw.setHeader(key, value);
-      };
-      reply['writeHead'] = function (key, value) {
-        return this.raw.writeHead(key, value);
-      };
-      reply['end'] = function () {
-        this.raw.end();
-      };
-      done();
-    });
+    // instance.addHook('onRequest', (request, reply, done) => {
+    //   reply['setHeader'] = function (key, value) {
+    //     return this.raw.setHeader(key, value);
+    //   };
+    //   reply['writeHead'] = function (key, value) {
+    //     return this.raw.writeHead(key, value);
+    //   };
+    //   reply['end'] = function () {
+    //     this.raw.end();
+    //   };
+    //   done();
+    // });
     app = await NestFactory.create<NestFastifyApplication>(
       AppModule,
       new FastifyAdapter(instance),
