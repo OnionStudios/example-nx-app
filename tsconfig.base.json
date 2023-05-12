@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nestjs-shopify/auth": ["libs/@nestjs-shopify/auth/src/index.ts"],
+      "@nestjs-shopify/core": ["libs/@nestjs-shopify/core/src/index.ts"],
+      "@nestjs-shopify/graphql": ["libs/@nestjs-shopify/graphql/src/index.ts"],
+      "@nestjs-shopify/webhooks": ["libs/@nestjs-shopify/webhooks/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
