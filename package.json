@@ -22,10 +22,6 @@
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.7.14",
-    "@nestjs-shopify/auth": "^4.0.0",
-    "@nestjs-shopify/core": "^3.0.0",
-    "@nestjs-shopify/graphql": "^4.0.0",
-    "@nestjs-shopify/webhooks": "^3.0.0",
     "@nestjs/bull": "^0.6.3",
     "@nestjs/common": "^9.4.0",
     "@nestjs/config": "^2.3.1",
