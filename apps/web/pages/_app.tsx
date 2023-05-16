@@ -1,3 +1,7 @@
+import '@shopify/polaris/build/esm/styles.css';
+
+import App from 'next/app';
+
 import {
   ApolloClient,
   ApolloProvider,
@@ -10,8 +14,6 @@ import {
 } from '@shopify/app-bridge-react';
 import { AppProvider as PolarisProvider } from '@shopify/polaris';
 import translations from '@shopify/polaris/locales/en.json';
-import '@shopify/polaris/build/esm/styles.css';
-import App from 'next/app';
 
 import { userLoggedInFetch } from '../utils/userLoggedInFetch';
 
@@ -38,7 +40,7 @@ function MyProvider(props) {
 
 class MyApp extends App {
   render() {
-    const { Component, pageProps, host } = this.props as any;
+    const { Component, pageProps, host } = this.props;
 
     return (
       <PolarisProvider i18n={translations}>
