@@ -1,1 +1,0 @@
-export const SHOPIFY_HMAC_KEY = 'SHOPIFY_HMAC_KEY';
