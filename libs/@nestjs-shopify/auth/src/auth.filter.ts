@@ -25,8 +25,8 @@ export class ShopifyAuthExceptionFilter
     const options = this.getShopifyOptionsFor(exception.accessMode);
     const context = host.switchToHttp();
 
-    const getReq = context.getRequest<IncomingMessage>();
-    const getRes = context.getResponse<ServerResponse>();
+    const getReq = context.getRequest();
+    const getRes = context.getResponse();
     getReq.statusCode = exception.getStatus();
     // get raw req & res
     const { rawRequest, rawResponse } = getRawReqAndRes(
