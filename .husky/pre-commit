@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx nx lint && npx nx format:check
-# 
+# npx nx affected:lint && npx nx format:write --uncommitted
+npm run lint-staged
