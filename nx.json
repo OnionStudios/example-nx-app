@@ -38,6 +38,9 @@
     }
   },
   "defaultProject": "web",
+  "workspaceLayout": {
+    "libsDir": "packages"
+  },
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "sharedGlobals": ["{workspaceRoot}/babel.config.json"],
